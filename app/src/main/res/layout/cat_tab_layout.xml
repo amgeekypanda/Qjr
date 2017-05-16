@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/lib/geekypanda.com.qjr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app1="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/cat_tbrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:id="@+id/cat_tb">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:id="@+id/tbback"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/back"
+                    android:layout_centerVertical="true"
+
+                    />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+        <ImageView
+            android:id="@+id/tbiv1"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search"
+
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="34dp"
+            android:layout_marginEnd="34dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/cttv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="QuoteJr"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+
+    <com.astuetz.PagerSlidingTabStrip
+        android:id="@+id/cattab"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/cat_tbrl"
+        android:background="@color/white"
+        android:textSize="18dp"
+        app1:pstsTextAllCaps="false"
+        app1:pstsUnderlineColor="@color/white"
+        app1:pstsIndicatorHeight="3dp"
+        app1:pstsDividerColor="@color/white"
+        android:textColorPrimary="@color/black"
+        />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/catvp"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/cattab"
+
+        >
+
+
+    </android.support.v4.view.ViewPager>
+
+</RelativeLayout>

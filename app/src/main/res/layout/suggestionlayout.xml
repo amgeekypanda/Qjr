@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:id="@+id/cat_tb">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/topback"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back"
+                android:layout_centerVertical="true"
+                />
+
+            <TextView
+                android:id="@+id/toptv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Suggestions "
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="100dp"/>
+
+            <ImageView
+                android:id="@+id/tbiv1"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/search"
+                android:layout_toRightOf="@+id/toptv"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="40dp"
+                android:visibility="gone"
+
+                />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_below="@+id/cat_tb"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/suggestionname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hintname"
+            android:textSize="20dp"
+            android:imeOptions="actionNext"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+          />
+
+        <EditText
+            android:id="@+id/suggestionemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hintmail"
+            android:textSize="20dp"
+            android:imeOptions="actionNext"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/suggestionname"
+            />
+
+        <EditText
+            android:id="@+id/suggestioncomment"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:hint="@string/hintcomment"
+            android:textSize="20dp"
+            android:background="@drawable/profile_edtxt_bg"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/suggestionemail"
+            android:ems="20"
+            android:gravity="start"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine"
+            android:lines="3"
+            android:maxLines="5"
+            android:nextFocusDown="@null"
+            android:padding="10dp"
+            android:selectAllOnFocus="true"
+            />
+
+        <Button
+            android:id="@+id/submit_feedback"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/suggestioncomment"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@color/black"
+            android:text="SEND"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        android:layout_gravity="bottom|end"
+        android:layout_alignParentBottom="true"
+        ads:adUnitId="@string/banner_home_footer">
+    </com.google.android.gms.ads.AdView>
+</RelativeLayout>

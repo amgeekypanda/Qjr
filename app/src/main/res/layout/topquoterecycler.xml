@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:id="@+id/cat_tb">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/topback"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back"
+                android:layout_centerVertical="true"
+                />
+
+            <TextView
+                android:id="@+id/toptv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Top 20 "
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="82dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/topback"
+                android:layout_toEndOf="@+id/topback"
+                android:layout_marginStart="82dp" />
+
+            <ImageView
+                android:id="@+id/tbiv1"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/search"
+                android:layout_toRightOf="@+id/toptv"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="40dp"
+                android:visibility="gone"
+
+                />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cat_tb"
+        android:background="@color/white"
+
+
+        android:scrollbars="none">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/topquoterecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"        >
+        </android.support.v7.widget.RecyclerView>
+
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">QuoteJr</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="hintname"><font size="15">name</font></string>
+    <string name="hintmail"><font size="15">email</font></string>
+    <string name="hintcomment"><font size="15">comment</font></string>
+
+    <string name="Quote_link"><a href="https://www.quotejr.com/">Quotejr.com</a></string>
+
+    <string name="about_us">QuoteJr is a solution provider for your mood with suitable quotes. By reading the quotes you will feel more positiveness and great</string>
+
+
+    <string name="ad_name">AdMob</string>
+    <string name="title_activity_second_activiy">Interstitial</string>
+    <string name="msg_welcome">Welcome to Admob. Click on the below button to launch the Interstitial ad.</string>
+    <string name="btn_fullscreen_ad">Show Fullscreen Ad</string>
+
+    <!-- AdMob ad unit IDs -->
+    <string name="banner_home_footer">ca-app-pub-8632656042684242/7364026811</string>
+    <string name="interstitial_full_screen">ca-app-pub-8632656042684242/1677420012</string>
+
+
+</resources>
